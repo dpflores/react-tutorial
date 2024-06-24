@@ -1,5 +1,5 @@
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author, number } = props;
 
   return (
     <article className="book">
@@ -8,6 +8,8 @@ const Book = (props) => {
 
       <h4>{author}</h4>
       {props.children}
+
+      <span className="number">{`#${number + 1}`}</span>
     </article>
   );
 };
